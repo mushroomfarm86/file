@@ -7,7 +7,7 @@ if has("gui_win32")
     vnoremap <C-C> "+y
 
     " CTRL-V are Paste
-    map <C-V>		"+gP
-    cmap <C-V>		<C-R>+
+    map <C-V> "+gP
+    cmap <C-V> <C-R>+
   endif
 endif
