@@ -1,42 +1,24 @@
-"make vim behave in a more modern way
-set nocompatible
+" enable windows cut, copy, paste shortcut
+if has("gui_win32")
+    source $VIMRUNTIME/mswin.vim
+endif
 
-" command line completion
-set wildmenu
 
-" highlight matched search
-set hlsearch
-
-" cursor on matched string while typing search pattern
-set incsearch
-
-" show line number
-set number
-
-" show the cursor position
-set ruler
+" set nocompatible        " make vim behave in a more modern way
+set wildmenu            " command line completion
+set hlsearch            " highlight matched search
+set incsearch           " cursor on matched string while typing search pattern
+set number              " show line number
+set ruler               " show the cursor position
 
 " set font type and font size
 if has('gui_running')
-  set guifont=Inconsolata:h12
+        if has('gui_win32')
+            set guifont=Inconsolata:h12
+        endif
 endif
 
 " enable syntax highlighting
-if !exists("g:syntax_on")
-  syntax enable
-endif
-
-" enable windows cut, copy, paste shortcut
-if has("gui_win32")
-  if has("clipboard")
-    " CTRL-X are Cut
-    vnoremap <C-X> "+x
-
-    " CTRL-C are Copy
-    vnoremap <C-C> "+y
-
-    " CTRL-V are Paste
-    map <C-V> "+gP
-    cmap <C-V> <C-R>+
-  endif
+if !exists('g:syntax_on')
+    syntax enable
 endif
