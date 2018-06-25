@@ -14,7 +14,7 @@ set ruler               " show the cursor position
 " set font type and font size
 if has('gui_running')
         if has('gui_win32')
-            set guifont=Inconsolata:h12
+            set guifont=Inconsolata:h12:cANSI
         endif
 endif
 
