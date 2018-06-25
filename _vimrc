@@ -1,6 +1,6 @@
 " enable windows cut, copy, paste shortcut
 if has("gui_win32")
-    source $VIMRUNTIME/mswin.vim
+  source $VIMRUNTIME/mswin.vim
 endif
 
 
@@ -13,12 +13,12 @@ set ruler               " show the cursor position
 
 " set font type and font size
 if has('gui_running')
-        if has('gui_win32')
-            set guifont=Inconsolata:h12:cANSI
-        endif
+  if has('gui_win32')
+    set guifont=Inconsolata:h12:cANSI
+  endif
 endif
 
 " enable syntax highlighting
 if !exists('g:syntax_on')
-    syntax enable
+  syntax enable
 endif
